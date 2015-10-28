@@ -1,0 +1,25 @@
+{
+  "name": "mongo-everywhere",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "jsnext": "src/index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "watch": "onchange 'src/**/*.js' -- npm run build",
+    "test": "mocha --compilers js:babel/register"
+  },
+  "devDependencies": {
+    "babel": "^5.8.29",
+    "babelify": "^6.4.0",
+    "browserify": "^12.0.0",
+    "mocha": "^2.3.3",
+    "onchange": "^2.0.0"
+  },
+  "dependencies": {
+    "connect-mongo": "^0.8.2",
+    "express": "^4.13.3",
+    "express-mongo-db": "^2.0.3",
+    "express-session": "^1.12.0",
+    "supertest": "^1.1.0"
+  }
+}
